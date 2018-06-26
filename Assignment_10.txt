@@ -1,0 +1,106 @@
+1)Ans:-
+
+class Animal:
+    def Animal_attribute(self):
+        self.name = "Leopard"
+        self.speed = "58Km/h"
+        self.strangth = "powerful"
+        print("Name :{}\nSpeed :{}\nStrangth :{}".format(self.name, self.speed, self.strangth))
+
+
+class Leopard(Animal):
+    print("Dangerous")
+
+
+a = Animal()
+b = Leopard()
+b.Animal_attribute()
+
+
+
+
+2)Ans:-
+
+A B
+A B
+
+3)Ans:-
+
+print("Cop Details:")
+
+class Cop:
+    def __init__(self):
+        self.name = "Deepankar"
+        self.age = 21
+        self.workexperience = "8 year"
+        self.designation = "IPS"
+
+    def add(self):
+        print('Name: {}, Age: {}, WorkExperience: {},Desgnation:{}'. \
+              format(self.name, self.age, self.workexperience, self.designation))
+
+    def display(self):
+        return (Cop.add(self))
+
+    def update(self, name, age, year, designation):
+        print("New Officer:")
+        self.name = name
+        self.age = age
+        self.workexperience = year
+        self.designation = designation
+        print('Name: {}, Age: {}, WorkExperience: {},Desgnation:{}'. \
+              format(self.name, self.age, self.workexperience, self.designation))
+
+
+class Mission(Cop):
+    def add_mission_details(self):
+        print("Mission:")
+        self.case = "Robbery"
+        self.place = "Dehradun"
+        print("Case:{} ,Place:{}".format(self.case, self.place))
+
+    def available_Officer(self):
+        print("Available Officer:")
+        super().add()
+
+
+d = Cop()
+
+d.display()
+
+d.update("Dharam", 25, "9 year", "DIG")
+
+n = Mission()
+
+n.add_mission_details()
+
+n.available_Officer()
+
+
+4)Ans:-
+
+class Shape:
+    def __init__(self):
+        self.length=20
+        self.breadth=30
+
+    def squarearea(self):
+        return self.length*self.length
+
+    def rectanglearea(self):
+        return self.length*self.breadth
+
+class rectangle(Shape):
+    def rectangle(self):
+        print("Area Of Rectangle Is :",super().rectanglearea())
+
+class square(Shape):
+    def square(self):
+        print("Area Of Square Is :",super().squarearea())
+
+obj=Shape()
+obj1=rectangle()
+obj2=square()
+
+obj1.rectangle()
+obj2.square()
